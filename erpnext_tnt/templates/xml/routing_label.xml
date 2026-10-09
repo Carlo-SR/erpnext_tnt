@@ -62,8 +62,10 @@
 			<id><![CDATA[{{ product_id }}]]></id>
 			<type><![CDATA[{{ product_type }}]]></type>
 			<!--Element option is optional, maxOccurs=5-->
+            {# HZ = fully regulated dangerous goods ("Gefahrgut" in the myTNT portal).
+               LB is the excepted lithium battery option (section II) and must not be used here. #}
             {% if is_hazardous %}
-                <option id="LB"><![CDATA[LB]]></option>
+                <option id="HZ"><![CDATA[HZ]]></option>
             {% endif %}
 		</product>
 		<account>
