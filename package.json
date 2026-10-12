@@ -1,6 +1,6 @@
 {
   "name": "erpnext_tnt",
-  "version": "0.10.8",
+  "version": "0.10.9",
   "author": "Starktail (Pty) Ltd <support@starktail.com>",
   "main": "index.js",
   "devDependencies": {
