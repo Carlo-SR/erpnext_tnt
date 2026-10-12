@@ -198,6 +198,11 @@
             <SERVICE><![CDATA[{{ tnt_service or "15N" }}]]></SERVICE>
             <!--Element option is optional, maxOccurs=5-->
             <!-- <OPTION><![CDATA[PR]]></OPTION> -->
+            {# HZ = fully regulated dangerous goods. TNT: the option must be declared on the ship request
+               together with HAZARDOUS=Y, otherwise the goods are not treated/billed as dangerous goods. #}
+            {% if is_hazardous %}
+            <OPTION><![CDATA[HZ]]></OPTION>
+            {% endif %}
             <!--Element DESCRIPTION is optional.   Please describe the consignment goods being shipped.   This
 				is not used for custom purposes.
 				For UK domestic dangerous goods shipments, please include HZ in first 2 characters of the description.
